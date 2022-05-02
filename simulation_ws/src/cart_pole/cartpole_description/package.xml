@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>cartpole_description</name>
+  <version>0.0.0</version>
+  <description>The cartpole_v0_pkg package</description>
+
+  <maintainer email="duckfrost@theconstructsim.com">user</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>spawn_robot_tools_pkg</build_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>spawn_robot_tools_pkg</run_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

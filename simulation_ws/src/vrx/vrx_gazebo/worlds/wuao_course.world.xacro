@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!-- World containing sydneyregatta model and some course challenges -->
+<sdf version="1.6" xmlns:xacro="http://ros.org/wiki/xacro">
+  <world name="robotx_example_course">
+    <xacro:include filename="$(find vrx_gazebo)/worlds/sydneyregatta.xacro" />
+    <xacro:sydneyregatta />
+    <!--Waves-->
+    <xacro:include filename="$(find wave_gazebo)/world_models/ocean_waves/model.xacro"/>
+    <!--xacro:ocean_waves scale="2.5" gain="1.0" direction_y="1.0" direction_x="0.0" angle="0.0" period="5"/-->
+    <xacro:ocean_waves scale="2.5" gain="1.0" direction_y="1.0" direction_x="0.0" angle="0.0" period="5"/>
+
+    <!--Wind-->
+    <xacro:include filename="$(find vrx_gazebo)/worlds/xacros/usv_wind_plugin.xacro"/>
+    <xacro:usv_wind_gazebo>
+      <wind_objs>
+        <wind_obj>
+          <name>wamv</name>
+          <link_name>wamv/base_link</link_name>
+          <coeff_vector>.5 .5 .33</coeff_vector>
+        </wind_obj>
+      </wind_objs>
+    </xacro:usv_wind_gazebo>
+    <!-- Spawn Buoy 1 START-->
+    <include>
+      <name>buoy_1</name>
+      <uri>model://mb_marker_buoy_red</uri>
+      <pose>-1.0 -5.0 0.0 0.0 0.0 0.0</pose>
+    </include>
+    
+    <!-- Spawn Buoy 2 START-->
+    <include>
+      <name>buoy_2</name>
+      <uri>model://mb_marker_buoy_green</uri>
+      <pose>-1.0 5.0 0.0 0.0 0.0 0.0</pose>
+    </include>
+    
+    <!-- Spawn Buoy 1 END -->
+    <include>
+      <name>buoy_3</name>
+      <uri>model://mb_marker_buoy_red</uri>
+      <pose>30.0 -5.0 0.0 0.0 0.0 0.0</pose>
+    </include>
+    
+    <!-- Spawn Buoy 2 END -->
+    <include>
+      <name>buoy_4</name>
+      <uri>model://mb_marker_buoy_green</uri>
+      <pose>30.0 5.0 0.0 0.0 0.0 0.0</pose>
+    </include>
+  </world>
+</sdf>
