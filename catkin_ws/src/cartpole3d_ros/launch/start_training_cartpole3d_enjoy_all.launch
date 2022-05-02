@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <rosparam command="load" file="$(find cartpole3d)/config/cartpole3d_enjoy_all_params.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="cartpole3d" name="cartpole3d_enjoy_all" type="cartpole3d_enjoy_all.py" output="screen"/>
+</launch>

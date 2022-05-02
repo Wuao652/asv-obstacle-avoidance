@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <rosparam command="load" file="$(find wamv_drl)/config/wamv_random_params.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="wamv_drl" name="wamv_drl_random" type="wamv_drl_random.py" output="screen"/>
+</launch>

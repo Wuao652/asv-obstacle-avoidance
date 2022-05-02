@@ -1,0 +1,2 @@
+tensorboard --logdir=A2C:tensorboard_logs/A2C/,ACKTR:tensorboard_logs/ACKTR/,DDPG:tensorboard_logs/DDPG/,PPO1:tensorboard_logs/PPO1/,PPO2:tensorboard_logs/PPO2/,TRPO:tensorboard_logs/TRPO/,SAC:tensorboard_logs/SAC/,TD3:tensorboard_logs/TD3/
+

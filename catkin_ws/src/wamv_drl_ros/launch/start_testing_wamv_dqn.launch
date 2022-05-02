@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <rosparam command="load" file="$(find wamv_drl)/config/wamv_dqn_test_params.yaml" />
+    <!-- Launch the testing system -->
+    <node pkg="wamv_drl" name="wamv_drl_dqn_test" type="wamv_dqn_test.py" output="screen"/>
+</launch>
